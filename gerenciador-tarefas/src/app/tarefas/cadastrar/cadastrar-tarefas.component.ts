@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-cadastrar-tarefas',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class CadastrarTarefasComponent {
 
+  @ViewChild('formTarefa', { static: true }) 
+  formTarefa: NgForm;
+  
 }
