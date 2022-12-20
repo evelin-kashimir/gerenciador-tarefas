@@ -1,22 +1,27 @@
 <div class="card">
     <h2 class="card-body">Cadastrar tarefa</h2>
-    <form class="card-footer">
+    <form #formTarefa="ngForm" class="card-footer">
         <div class="form-group">
             <label for="nome">Tarefa:</label>
-            <input type="text" class="form-control" id="nome" name="nome" minlength="5" required>
-            <div class="alert alert-danger">
-                <div>
+            <input [(ngModel)]="tarefa.nome" #nome="ngModel" 
+                type="text" class="form-control" id="nome" name="nome" minlength="5" required>
+            <div *ngIf="nome.errors && (nome.dirty || nome.touched)"
+                class="alert alert-danger">
+                <div [hidden]="!nome.errors.required">
                     Digite a tarefa.
                 </div>
-                <div>
-                    A tarefa deve conter ao menos 5 caracteres.
+                <div [hidden]="!nome.errors.minlength">
+                    A tarefa deve conter pelo menos 5 caracteres.
                 </div>
             </div>
         </div>
         <div class="form-group text-center">
-            <input type="submit" class="btn btn-success" value="Cadastrar">
-            <a class="btn btn-warning">
-                Voltar
+            <input type="submit" class="btn btn-outline-success" 
+            value="✅ Cadastrar"
+            (click)="cadastrar()"
+            [disabled]="!formTarefa.form.valid">
+            <a [routerLink]="['/tarefas']" class="btn btn-outline-info">
+                <b> ⬅️  </b> Voltar
             </a>
         </div>
     </form>
