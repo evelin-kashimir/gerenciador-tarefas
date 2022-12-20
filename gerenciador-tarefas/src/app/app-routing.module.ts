@@ -8,7 +8,7 @@ const routes: Routes = [
     redirectTo: '/tarefas/listar',
     pathMatch: 'full'
   },
-  ...TarefaRoutes //concatenando as rotas do Tarefas routes, as rotas principais
+  ...TarefaRoutes //concatenando as rotas do arquivo TarefasRoutes às rotas principais
 ];
 
 @NgModule({
