@@ -1,0 +1,1 @@
+{"ast":null,"code":"export * from './tarefas.module';","map":{"version":3,"mappings":"AAAA,cAAc,kBAAkB","names":[],"sourceRoot":"","sources":["C:\\projetos-angular\\gerenciador-tarefas\\gerenciador-tarefas\\src\\app\\tarefas\\tarefas\\index.ts"],"sourcesContent":["export * from './tarefas.module';"]},"metadata":{},"sourceType":"module","externalDependencies":[]}

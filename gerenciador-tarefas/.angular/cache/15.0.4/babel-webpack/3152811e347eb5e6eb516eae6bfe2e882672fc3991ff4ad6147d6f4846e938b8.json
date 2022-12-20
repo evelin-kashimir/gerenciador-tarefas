@@ -1,0 +1,1 @@
+{"ast":null,"code":"export * from './tarefa.model';","map":{"version":3,"mappings":"AAAA,cAAc,gBAAgB","names":[],"sourceRoot":"","sources":["C:\\projetos-angular\\gerenciador-tarefas\\gerenciador-tarefas\\src\\app\\tarefas\\tarefas\\shared\\index.ts"],"sourcesContent":["export * from './tarefa.model';"]},"metadata":{},"sourceType":"module","externalDependencies":[]}
