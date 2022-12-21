@@ -20,7 +20,7 @@
             </th>
         </tr>
         <tr *ngFor="let tarefa of tarefas">
-            <td [class.bg-success]="tarefa.concluida">
+            <td [tarefaConcluida]="tarefa.concluida">
                 {{ tarefa.nome }}
             </td>
             <td style="width: 70px" class="text-center">
@@ -55,6 +55,13 @@
         </tr>
     </tbody>
 </table>
-<p *ngIf="tarefas.length === 0">
+<p 
+    [ngStyle]="{ 
+        'background-color': '#f08080', 
+        'color' : 'white',
+        'padding': '10px',
+        'width': '500px'
+        }
+        " *ngIf="tarefas.length === 0">
     Nenhuma tarefa cadastrada
 </p>
