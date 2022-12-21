@@ -1,1 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+#lista{
+    background-color: #e0fbfc;
+    border-radius: 16px;
+}
+
+#lista-vazia{ 
+    background-color: #ee6c4d;
+    color: #e0fbfc;
+    padding: 10px;
+    width: 550px;
+}
+
+.titulo {
+    color: #293241;
+}
+
+#titulo-principal {
+    color: #e0fbfc;
+}
+
+.segundo-botao {
+    margin-left: 10px;
+}
+
+#fundo {
+    background-color: #293241;
+     background-size: cover;
+     height: 100vh;
+     font-family: 'Chivo Mono', monospace;
+ }
+ 
+ #nome {
+    width: 400px;
+    margin: 1em;
+    margin-left: 60px;
+ }

@@ -13,7 +13,7 @@ export class TarefaConcluidaDirective {
   ngOnInit() {
     if (this.tarefaConcluida){
       this.element.nativeElement.style.textDecoration = "line-through";
-      this.element.nativeElement.style.backgroundColor = "#94d2bd";
+      this.element.nativeElement.style.backgroundColor = "#83c5be";
     }
   }
 }

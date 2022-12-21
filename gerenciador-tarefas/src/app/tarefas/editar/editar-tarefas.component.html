@@ -1,29 +1,28 @@
-<div class="card">
-    <div class="card-body">
-        <h2>Editar tarefa</h2>
-    </div>
-    <div class="card-footer">
-        <form #formTarefa="ngForm">
-            <div class="form-group">
-                <label for="nome">Tarefa:</label>
-                <input type="text" class="form-control" id="nome" name="nome" minlength="3" [(ngModel)]="tarefa.nome"
-                    #nome="ngModel" required>
-                <div *ngIf="nome.errors && (nome.dirty || nome.touched)" class="alert alert-danger">
-                    <div [hidden]="!nome.errors.required">
-                        Digite a tarefa.
-                    </div>
-                    <div [hidden]="!nome.errors.minlength">
-                        A tarefa deve conter ao menos 3 caracteres.
+<div class="container">
+    <div class="row justify-content-md-center">
+        <div class="col-lg-6">
+            <h1 id="titulo-principal" class="text-center">Editar tarefa</h1>
+
+            <form id="lista" #formTarefa="ngForm">
+                <div class="form-group text-center">
+                    <label for="nome"><b>Tarefa:</b></label>
+                    <input type="text" class="form-control" id="nome" name="nome" minlength="3"
+                        [(ngModel)]="tarefa.nome" #nome="ngModel" required>
+                    <div *ngIf="nome.errors && (nome.dirty || nome.touched)" class="alert alert-danger">
+                        <div [hidden]="!nome.errors.required">
+                            Digite a tarefa.
+                        </div>
+                        <div [hidden]="!nome.errors.minlength">
+                            A tarefa deve conter ao menos 3 caracteres.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="form-group text-center">
-                <input (click)="atualizar()" [disabled]="!formTarefa.form.valid" type="submit" class="btn btn-outline-success"
-                    value="✅ Atualizar">
-                <a [routerLink]="['/tarefas']" class="btn btn-outline-info">
-                    <b> ⬅️ </b> Voltar
-                </a>
-            </div>
-        </form>
+                <div class="form-group text-center">
+                    <a [ngStyle]="{'background-color':'#3d5a80'}" [routerLink]="['/tarefas']" class="btn"> ⬅️ </a>
+                    <input [ngStyle]="{'background-color':'#006d77'}" (click)="atualizar()"
+                        [disabled]="!formTarefa.form.valid" type="submit" class="btn segundo-botao" value="✅">
+                </div>
+            </form>
+        </div>
     </div>
 </div>
