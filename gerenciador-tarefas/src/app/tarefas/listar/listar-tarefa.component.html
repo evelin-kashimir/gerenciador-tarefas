@@ -27,7 +27,8 @@
                 <input type="checkbox" [value]="tarefa.id" [checked]="tarefa.concluida">
             </td>
             <td class="text-center" style="width: 200px">
-                <a title="Editar" alt="Editar" class="btn btn-warning">
+                <a title="Editar" alt="Editar" class="btn btn-warning"
+                [routerLink]="['/tarefas/editar', tarefa.id]">
                     <span class="glyphicon glyphicon-pencil" aria-hidden="true">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-pencil-square" viewBox="0 0 16 16">
