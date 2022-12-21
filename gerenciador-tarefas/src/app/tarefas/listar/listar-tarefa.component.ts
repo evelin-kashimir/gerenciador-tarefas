@@ -19,4 +19,19 @@ export class ListarTarefaComponent {
   listarTarefas() {
     return this.tarefaService.listarTodos();
   }
+
+  remover($event: any, tarefa: Tarefa): void {
+    $event.preventDefault(); //desabilitando função de atualização de página
+    if(confirm('Deseja remover a tarefa "' + tarefa.nome + ' "?')) { //confirm é uma função de alerta do navegador
+      this.tarefaService.remover(tarefa.id);
+      this.tarefas = this.listarTarefas();
+    }
+  }
+
+  atualizarStatus(tarefa: Tarefa): void {
+    if (confirm('Deseja alterar o status da tarefa?')) {
+      this.tarefaService.alterarStatus(tarefa.id);
+      this.tarefas = this.listarTarefas();
+    }
+  }
 }
