@@ -11,5 +11,6 @@ Desenvolvida em Angular, esta aplicação web tem como objetivo oferecer uma lis
 + CSS 3
 + Angular
 + TypeScript
++ Bootstrap
 + Jest
 + Git
